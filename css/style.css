@@ -11,11 +11,14 @@ header {
     flex-wrap: wrap;
 }
 
-.menu-title {
+.menu-contains {
+    background-color: #F0E76F;
+    margin: 40px 0px;
+    gap: 60px;
     display: flex;
-    justify-content: center;
+    padding: 15px 10px;
 }
 
 .menu {
-    background-color: #F0E76F;
+
 }
