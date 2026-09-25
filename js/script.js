@@ -62,7 +62,7 @@ function createProductCard(product) {
   <img src="${product.image}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${product.title}</h5>
-    <p class="card-price">$${product.price}</p>
+    <p class="card-price">₴${product.price}</p>
      <p class="card-ingredients">${product.ingradiens}</p>
     <a href="#" onclick="addToCart(${product.id})" class="btn btn-primary">Добавити в кошик<i class="ti ti-garden-cart"></i></a>
     
@@ -82,4 +82,26 @@ function displayProducts() {
 document.addEventListener('DOMContentLoaded', () => {
 
     fetchData()
+});
+
+
+let aboutUs = document.querySelector('.aboutUs');
+let menu = document.querySelector('.headerMenu');
+let contacts = document.querySelector('.contacts');
+let promotions = document.querySelector('.promotions');
+
+aboutUs.addEventListener('click', () => {
+    window.location.href = 'aboutUs.html';
+});
+
+menu.addEventListener('click', () => {
+    window.location.href = 'index.html';
+});
+
+promotions.addEventListener('click', () => {
+    window.location.href = 'promotions.html';
+});
+
+contacts.addEventListener('click', () => {
+    window.location.href = 'contacts.html';
 });
