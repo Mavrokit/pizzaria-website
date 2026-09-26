@@ -35,3 +35,48 @@ header {
     cursor: pointer;
     transition: 0.3s;
 }
+
+.contactsContains{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+    background-color: #fbfffd;
+}
+
+.adressTime {
+    margin-left: 20px;
+    padding: 8px;
+    background-color: #f9eded;
+}
+
+.contact{
+    padding: 5px;
+    background-color: #f9eded;
+}
+
+.socials{
+    margin-right: 20px;
+    padding: 5px;
+    background-color: #f9eded;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    background-color: #ffeba3;
+    padding: 15px;
+    margin: 20px 234px;
+    border-radius: 15px;
+
+}
+
+.description{
+    font-size: 20px;
+    display:flex;
+    justify-content: center;
+    background-color: #ffeba3;
+    padding: 15px;
+    margin: 20px 120px;
+    border-radius: 15px;
+}
