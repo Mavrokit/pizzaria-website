@@ -1,7 +1,7 @@
 const SUPABASE_URL = 'https://fhtakxinyazmtcravwxo.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_UaR4tZLGKBfSLKgcLYC8_Q_gibKwQ3X';
 
-const productsContainer = document.querySelector('.pizza-card');
+const productsContainer = document.querySelector('.pizza-container');
 
 let products = [];
 let cart = [];
@@ -89,6 +89,7 @@ let aboutUs = document.querySelector('.aboutUs');
 let menu = document.querySelector('.headerMenu');
 let contacts = document.querySelector('.contacts');
 let promotions = document.querySelector('.promotions');
+let cartHtml = document.querySelector(".cartHtml");
 
 aboutUs.addEventListener('click', () => {
     window.location.href = 'aboutUs.html';
@@ -105,3 +106,20 @@ promotions.addEventListener('click', () => {
 contacts.addEventListener('click', () => {
     window.location.href = 'contacts.html';
 });
+
+cartHtml.addEventListener('click', () => {
+    window.location.href = 'cart.html';
+});
+
+function addToCart(productId) {
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+    const cartProduct = cart.find(p => p.id === productId);
+    if (cartProduct) {
+        cartProduct.quantity += 1;
+    } else {
+        cart.push({title: product.title, price: product.price, image: product.image, quantity: 1});
+    }
+    saveJsonCookie("cart", cart, 3600*24);
+    console.log("Додано в кошик:", product)
+}
