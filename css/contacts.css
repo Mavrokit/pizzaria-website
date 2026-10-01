@@ -12,7 +12,7 @@ header {
     flex-wrap: wrap;
 }
 
-.headerMenu:hover {
+.aboutUs:hover {
     color: #00ff55;
     cursor: pointer;
     transition: 0.3s;
@@ -40,24 +40,27 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 5px;
-    background-color: #fbfffd;
+    margin: 0px 100px;
+    background-color: #f9eded;
+    font-size: 25px;
 }
 
 .adressTime {
-    margin-left: 20px;
-    padding: 8px;
+    margin-left: 100px;
+    padding: 30px;
     background-color: #f9eded;
 }
 
 .contact{
-    padding: 5px;
+    padding: 30px;
     background-color: #f9eded;
+    border-color: rgb(2, 255, 255);
+    border-radius: 15px;
 }
 
 .socials{
-    margin-right: 20px;
-    padding: 5px;
+    margin-right: 100px;
+    padding: 30px;
     background-color: #f9eded;
 }
 
