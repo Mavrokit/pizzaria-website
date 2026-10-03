@@ -31,13 +31,6 @@ header {
     text-align: center;
 }
 
-.cartHtml{
-    display: flex;
-    justify-content: end;
-    border-radius: 15px;
-    margin-right: 15px;
-}
-
 footer {
     background-color: #e4c5a7;
     margin: 30px;

@@ -4,7 +4,7 @@ const SUPABASE_ANON_KEY = 'sb_publishable_UaR4tZLGKBfSLKgcLYC8_Q_gibKwQ3X';
 const productsContainer = document.querySelector('.pizza-container');
 
 let products = [];
-let cart = [];
+let cart = getJsonCookie("cart") || [];
 
 // 1.Універсальна функція для збереження будь-яких даних (масивів/об'єктів) у
 function getJsonCookie(cookieName) {
@@ -47,15 +47,6 @@ async function fetchData() {
     displayProducts(products);
 }
 
-function addToCart(productId) {
-    const product = products.find(p => p.id === productId);
-    if (product) {
-        cart.push(product);
-        saveJsonCookie('cart', cart, 3600);
-        console.log("Додано до кошика:", product);
-    }
-}
-
 function createProductCard(product) {
     return `
 <div class="card" style="width: 18rem;">
@@ -81,7 +72,7 @@ function displayProducts() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    fetchData()
+   productsContainer && fetchData()
 });
 
 
@@ -123,3 +114,27 @@ function addToCart(productId) {
     saveJsonCookie("cart", cart, 3600*24);
     console.log("Додано в кошик:", product)
 }
+
+const cartItems = document.querySelector('#cartItems');
+
+function displayCart() {
+    cartItems.innerHTML = "";
+    cart.forEach(item => {
+        cartItems.innerHTML += `
+        <div class="cart-item d-flex align-items-center mb-3 p-1 gap-3">
+            <img src="${item.image}" alt="${item.title}" width="50">
+            <div class="cart-item-details">
+                <h5>${item.title}</h5>
+                <div>₴${item.price} x ${item.quantity}</div>
+            </div>
+        </div>
+        `;
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+   productsContainer && fetchData()
+
+   cartItems && displayCart()
+});

@@ -18,16 +18,52 @@
         <div class="headerMenu"> Меню </div>
         <div class="contacts"> Контакти </div>
         <div class="promotions"> Акції </div>
+        <button class="cartHtml btn btn-success">Кошик<i class="ti ti-garden-cart"></i></button>
     </header>
 
     <main class ="container">
 
     <h1 class="title">Ваші товари:</h1>
 
-    <container class="items">
+    <container class="items" id="cartItems">
 
     </container>
     
+    <h4>Оформлення замовлення</h4>
+    <form class="row g-3">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">ПІБ</label>
+    <input type="text" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Номер телефону</label>
+    <input type="text" class="form-control" id="inputPassword4">
+  </div>
+    <div class="col-md-6">
+    <label for="inputCity" class="form-label">Місто</label>
+    <input type="text" class="form-control" id="inputCity">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Адреса</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Вулиця">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Квартира/Номер будинку</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Квартира, студія або поверх">
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Не передзвонювати
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-success">Підтвердити замовлення</button>
+  </div>
+</form>
+
     </main>
 
     <footer>
