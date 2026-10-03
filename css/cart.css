@@ -7,6 +7,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: #A5CF83;
     padding: 5px 10px;
     flex-wrap: wrap;
@@ -19,6 +20,11 @@ footer {
     padding: 30px 15px;
     align-items: flex-end;
     align-self: flex-end;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .aboutUs:hover {
